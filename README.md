@@ -192,7 +192,15 @@ console.log(incrementNew())
 // {type: "INCREMENT"}
 ```
 
+https://github.com/phanhoangloc/react-native-architecture
 
+https://daveceddia.com/redux-action-creators/
+
+https://github.com/redux-utilities/reduce-reducers
+
+https://medium.com/fullstack-academy/thunks-in-redux-the-basics-85e538a3fe60
+
+https://github.com/shakacode/redux-tree
 
 https://amplitude.github.io/redux-query/docs/getting-started
 

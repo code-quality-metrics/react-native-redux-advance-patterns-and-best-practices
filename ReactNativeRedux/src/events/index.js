@@ -4,7 +4,7 @@
  */
 import store from '../store'
 import firebase from '../lib/firebase'
-import {USER_SET, USER_DEL} from '../actions/user'
+import {setUser, USER_DEL} from '../actions/user'
 import {FIREBASE_INITIALIZED} from '../actions/firebase'
 
 firebase.auth().onAuthStateChanged(user => {
@@ -13,12 +13,7 @@ firebase.auth().onAuthStateChanged(user => {
     store.dispatch({
       type: FIREBASE_INITIALIZED,
     })
-    store.dispatch({
-      type: USER_SET,
-      payload: {
-        email,
-      },
-    })
+    store.dispatch(setUser(email))
   } else {
     store.dispatch({
       type: USER_DEL,

@@ -1,31 +1,25 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import {StyleSheet, Platform, Image, Text, View} from 'react-native'
+import {connect} from 'react-redux'
+import {StyleSheet, Text, View} from 'react-native'
 
-export default class Main extends React.Component {
+class Main extends React.Component {
   render() {
-    const { email } = this.props
+    const {email} = this.props
     return (
       <View style={styles.container}>
-        <Text>Hi {email && email}!</Text>
+        <Text>Hi {email}!</Text>
       </View>
     )
   }
 }
 
-const mapStateToProps = (state /*, ownProps*/) => {
+const mapStateToProps = state => {
   return {
-    email: state.user.email
+    email: state.user.email,
   }
 }
 
-const mapDispatchToProps = { increment, decrement, reset }
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Counter)
-
+export default connect(mapStateToProps)(Main)
 
 const styles = StyleSheet.create({
   container: {

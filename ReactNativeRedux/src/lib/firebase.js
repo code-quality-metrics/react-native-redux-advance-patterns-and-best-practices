@@ -26,7 +26,7 @@ export const FIREBASELIBAUTHCHANGE = 'FIREBASELIB::AUTHCHANGE'
  *
  * NOTICE: Decoupling this library with the rest of the code
  * by using this function this library knows nothing
- * about your code our structure n.n
+ * about our code our structure n.n
  *
  * NOTICE: Since this creates an action that is outside the your code planning
  * its very possible that you'll need this function in two different reducers,
