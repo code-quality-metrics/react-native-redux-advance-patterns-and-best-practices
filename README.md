@@ -173,6 +173,10 @@ onMount ->
 
 ## TOREAD
 
+https://github.com/18601673727/redux-axios
+https://github.com/xgrommx/awesome-redux
+https://github.com/reduxjs/redux/issues/1171
+
 no witch statements
 no constant duplication const TYPE = 'TYPE'
 
@@ -223,3 +227,7 @@ https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0
 https://blog.logrocket.com/improve-react-native-performance-with-immutability/
 
 https://github.com/Reactive-Extensions/RxJS
+
+## Articles
+
+https://devhub.io/topic/redux

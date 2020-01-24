@@ -1,4 +1,5 @@
-import {USER_SET, USER_DEL} from '../actions/user'
+import {USER_SET, USER_REMOVE} from '../actions/user'
+
 const userInitialState = {
   loggedIn: false,
   email: '',
@@ -46,7 +47,7 @@ export default function userReducer(state = userInitialState, action) {
       }
     }
 
-    case USER_DEL: {
+    case USER_REMOVE: {
       return userInitialState
     }
 

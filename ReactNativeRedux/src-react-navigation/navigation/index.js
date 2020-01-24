@@ -6,11 +6,13 @@ import Loading from '../pages/Loading'
 import SignUp from '../pages/SignUp'
 import Login from '../pages/Login'
 import Main from '../pages/Main'
+import Settings from '../pages/Settings'
 
 // create our app's navigation stack
 const AppBottomTabNavigator = createBottomTabNavigator(
   {
     Home: Main,
+    Settings: Settings,
   },
   // {
   //   initialRouteName: 'Loading',
@@ -26,6 +28,9 @@ const AppNavigator = createSwitchNavigator({
   Loading: Loading,
   App: AppBottomTabNavigator,
   Auth: AuthStackNavigator,
+},
+{
+  initialRouteName: 'Loading',
 })
 
 const AppNavigatorContainer = createAppContainer(AppNavigator)

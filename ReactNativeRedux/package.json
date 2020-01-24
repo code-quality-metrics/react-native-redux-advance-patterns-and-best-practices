@@ -8,7 +8,10 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "emulator-start": "~/Library/Android/sdk/emulator/emulator -avd $(~/Library/Android/sdk/emulator/emulator -list-avds) &"
+    "emulator-start": "~/Library/Android/sdk/emulator/emulator -avd $(~/Library/Android/sdk/emulator/emulator -list-avds) &",
+    "detox": "detox test -c android.emu.debug",
+    "detox-build": "detox build -c android.emu.debug",
+    "gradlew-clean": "cd android && ./gradlew clean && cd.."
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.0.4",
@@ -32,12 +35,35 @@
     "@babel/runtime": "^7.6.2",
     "@react-native-community/eslint-config": "^0.0.5",
     "babel-jest": "^24.9.0",
+    "detox": "^15.1.4",
     "eslint": "^6.5.1",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.56.0",
+    "mocha": "^7.0.0",
     "react-test-renderer": "16.9.0"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "detox": {
+    "configurations": {
+      "android.emu.debug": {
+        "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
+        "build": "cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug && cd ..",
+        "type": "android.emulator",
+        "device": {
+          "avdName": "Pixel_API_28"
+        }
+      },
+      "android.emu.release": {
+        "binaryPath": "android/app/build/outputs/apk/release/app-release.apk",
+        "build": "cd android && ./gradlew assembleRelease assembleAndroidTest -DtestBuildType=release && cd ..",
+        "type": "android.emulator",
+        "device": {
+          "avdName": "Nexus_5X_API_26"
+        }
+      }
+    },
+    "test-runner": "mocha"
   }
 }

@@ -1,4 +1,4 @@
-import NavigationService from '../navigation/service'
+import NavigationService from 'navigation/service'
 
 export const USER_SET = '[USER] SET'
 
@@ -21,4 +21,7 @@ export function setUser(email) {
     NavigationService.navigate('App')
   }
 }
-export const USER_DEL = '[USER] DELETE'
+
+export const USER_REMOVE = '[USER] REMOVE'
+
+export const removeUser = () => ({type: USER_REMOVE})

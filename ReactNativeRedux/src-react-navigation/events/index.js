@@ -15,8 +15,9 @@ firebase.auth().onAuthStateChanged(user => {
     })
     store.dispatch(setUser(email))
   } else {
-    store.dispatch({
-      type: USER_DEL,
-    })
+    // store.dispatch({
+    //   type: USER_DEL,
+    // })
+    console.log('[EVENT] User logged out')
   }
 })

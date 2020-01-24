@@ -19,12 +19,20 @@
 - [x] Which navigator is best for this app? => Switch + Stack
 - [x] Add switch navigator for login flow
 - [x] Redirect logged in user to homepage when logged in
-- [ ] Implement a Thunk
-- [ ] Implement logout without view
+- [x] Fix prettier
+- [x] Pivot to BoomAndBust
+- [x] Add settings button to menu
+- [x] Create settings page
+- [x] Add logout button to settings page
+- [ ] Add Detox
+- [ ] Implement Logout with Thunks
 - [ ] Redirect logged in user to SignUp when not logged in
 - [ ] Implement log in
 - [ ] Implement signup
 - [ ] Add a material library
+- [ ] Find out about catching on thunks and react https://github.com/facebook/react/issues/6895, https://github.com/facebook/react/issues/6895#issuecomment-281405036, https://github.com/facebook/react/issues/7617
+- [ ] Add error screen
+- [ ] Document the naming of actions, what happened vs what does it do?
 
 ## Later
 
