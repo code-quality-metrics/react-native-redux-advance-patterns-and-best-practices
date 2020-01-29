@@ -8,4 +8,31 @@
 
 <br/><br/>
 
-KISS
+## ![✔] 2 Name your actions consistently
+
+In the Flux world there are two main ways of naming actions, the name of the event, or the name of the effects or sequence of events that is being triggered, its common to mix those two in applications so choose one and stick with it.
+
+### Name of events
+
+- loginFormSubmitClicked
+- logoutButtonClicked
+- newGameDataReceived
+- userModalButtonClicked
+
+### Name of effects
+
+- loginUser
+- logoutUser
+- appendNewGameDataToGameHistory
+- openUserModal
+
+Originally was common to see the name of events in Flux applications, but more and more and opting to use the name of the effects, this one in MHO appears to have the most information compacted in the name, you can deduce more easily what trigger the effects than what is going to happen.
+
+In large applications its a good idea to prepend the name of the action with its module or whatever unit of separation of concerns you use e.g.
+
+`AD::TRACK_VIEW_REQUEST`
+or
+`[AD] TRACK_VIEW_REQUEST`
+
+
+TODO: KISS

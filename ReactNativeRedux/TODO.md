@@ -24,7 +24,11 @@
 - [x] Add settings button to menu
 - [x] Create settings page
 - [x] Add logout button to settings page
-- [ ] Add Detox
+- [x] Add Detox
+- [x] Fix firebase bug
+- [x] Add action naming consistency rule
+- [ ] Implement user is logged out detection on startup
+- [ ] Try to use the event listener of firebase both for login and logout to avoid replicating logic
 - [ ] Implement Logout with Thunks
 - [ ] Redirect logged in user to SignUp when not logged in
 - [ ] Implement log in
@@ -33,6 +37,7 @@
 - [ ] Find out about catching on thunks and react https://github.com/facebook/react/issues/6895, https://github.com/facebook/react/issues/6895#issuecomment-281405036, https://github.com/facebook/react/issues/7617
 - [ ] Add error screen
 - [ ] Document the naming of actions, what happened vs what does it do?
+- [ ] Move to https://rnfirebase.io/
 
 ## Later
 
