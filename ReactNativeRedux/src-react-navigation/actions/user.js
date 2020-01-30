@@ -2,7 +2,12 @@ import NavigationService from 'navigation/service'
 
 export const USER_SET = '[USER] SET'
 
-export function setUser(email) {
+/**
+ * Set the user in the state and navigate to the App Navigator because the
+ * user is logged in, note that this action creator uses thunk middleware
+ * to be able to navigate after the dispatch
+ */
+export function userSet(email) {
   return dispatch => {
     dispatch({
       type: USER_SET,
@@ -22,6 +27,13 @@ export function setUser(email) {
   }
 }
 
-export const USER_REMOVE = '[USER] REMOVE'
+export const USER_REMOVE = '[USER] LOGOUT'
 
-export const removeUser = () => ({type: USER_REMOVE})
+export function userLogout() {
+  return dispatch => {
+    dispatch({
+      type: USER_REMOVE,
+    })
+    NavigationService.navigate('Auth')
+  }
+}

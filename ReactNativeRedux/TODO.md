@@ -27,6 +27,7 @@
 - [x] Add Detox
 - [x] Fix firebase bug
 - [x] Add action naming consistency rule
+- [x] Create documentation about the consequences of redux action/reducer separation and compare it with React + Baobab.js
 - [ ] Implement user is logged out detection on startup
 - [ ] Try to use the event listener of firebase both for login and logout to avoid replicating logic
 - [ ] Implement Logout with Thunks

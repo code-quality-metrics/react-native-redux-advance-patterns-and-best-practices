@@ -4,20 +4,17 @@
  */
 import store from '../store'
 import firebase from '../lib/firebase'
-import {setUser, USER_DEL} from '../actions/user'
+import {userSet, userLogout} from '../actions/user'
 import {FIREBASE_INITIALIZED} from '../actions/firebase'
 
 firebase.auth().onAuthStateChanged(user => {
+  store.dispatch({
+    type: FIREBASE_INITIALIZED,
+  })
   if (user) {
     const {email} = user
-    store.dispatch({
-      type: FIREBASE_INITIALIZED,
-    })
-    store.dispatch(setUser(email))
+    store.dispatch(userSet(email))
   } else {
-    // store.dispatch({
-    //   type: USER_DEL,
-    // })
-    console.log('[EVENT] User logged out')
+    store.dispatch(userLogout())
   }
 })

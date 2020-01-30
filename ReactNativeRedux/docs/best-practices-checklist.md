@@ -34,5 +34,6 @@ In large applications its a good idea to prepend the name of the action with its
 or
 `[AD] TRACK_VIEW_REQUEST`
 
+TODO: Do not use the view to access the store if it is not necessary
 
 TODO: KISS

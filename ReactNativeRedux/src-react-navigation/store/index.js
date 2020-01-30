@@ -7,10 +7,10 @@ import thunk from 'redux-thunk'
 
 const store = createStore(
   rootReducer,
-  // composeWithDevTools(
+  composeWithDevTools(
     applyMiddleware(thunk, logger),
     // other store enhancers if any
-  // ),
+  ),
 )
 
 export default store
