@@ -1,12 +1,15 @@
-import React from 'react';
-import {StyleSheet, Text, TextInput, View, Button} from 'react-native';
+import React from 'react'
+import {connect} from 'react-redux'
+import {StyleSheet, Text, TextInput, View, Button} from 'react-native'
+import {logIn} from '../actions/firebase'
 
-export default class Login extends React.Component {
-  state = {email: '', password: '', errorMessage: null};
+class Login extends React.Component {
+  state = {email: '', password: '', errorMessage: null}
   handleLogin = () => {
-    // TODO: Firebase stuff...
-    console.log('handleLogin', this.state);
-  };
+    const {login} = this.props
+    const {email, password} = this.state
+    login(email, password)
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -35,7 +38,7 @@ export default class Login extends React.Component {
           onPress={() => this.props.navigation.navigate('SignUp')}
         />
       </View>
-    );
+    )
   }
 }
 
@@ -52,4 +55,20 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginTop: 8,
   },
-});
+})
+
+// const mapStateToProps = state => {
+//   return {
+//     todos: getVisibleTodos(state.todos, state.visibilityFilter)
+//   }
+// }
+
+const mapDispatchToProps = dispatch => {
+  return {
+    login: (email, password) => {
+      dispatch(logIn(email, password))
+    },
+  }
+}
+
+export default connect(undefined, mapDispatchToProps)(Login)

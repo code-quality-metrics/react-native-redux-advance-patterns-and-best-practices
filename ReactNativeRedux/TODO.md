@@ -29,7 +29,10 @@
 - [x] Add action naming consistency rule
 - [x] Create documentation about the consequences of redux action/reducer separation and compare it with React + Baobab.js
 - [x] Block upturn code references
-- [ ] Implement user is logged out detection on startup
+- [x] Implement user is logged out detection on startup
+- [x] Implement login with Thunks
+- [ ] Document that thunks are not considered actions by Redux, hence they don't log (they don't have types)
+- [ ] Fix inconsistencies with prettier and eslint
 - [ ] Try to use the event listener of firebase both for login and logout to avoid replicating logic
 - [ ] Implement Logout with Thunks
 - [ ] Redirect logged in user to SignUp when not logged in
@@ -40,6 +43,8 @@
 - [ ] Add error screen
 - [ ] Document the naming of actions, what happened vs what does it do?
 - [ ] Move to https://rnfirebase.io/
+- [ ] Add redux forms, we want to log what the user is doing in actions! document it
+- [ ] Add https://logrocket.com/
 
 ## Later
 
