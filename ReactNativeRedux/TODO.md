@@ -31,13 +31,12 @@
 - [x] Block upturn code references
 - [x] Implement user is logged out detection on startup
 - [x] Implement login with Thunks
-- [ ] Document that thunks are not considered actions by Redux, hence they don't log (they don't have types)
+- [x] Redirect logged in user to SignUp when not logged in
+- [x] Implement Logout with Thunks
+- [x] Document that thunks are not considered actions by Redux, hence they don't log (they don't have types)
+- [x] Use the event listener of firebase both for login and logout to avoid replicating logic
+- [ ] How to fix the three main problems of Redux?
 - [ ] Fix inconsistencies with prettier and eslint
-- [ ] Try to use the event listener of firebase both for login and logout to avoid replicating logic
-- [ ] Implement Logout with Thunks
-- [ ] Redirect logged in user to SignUp when not logged in
-- [ ] Implement log in
-- [ ] Implement signup
 - [ ] Add a material library
 - [ ] Find out about catching on thunks and react https://github.com/facebook/react/issues/6895, https://github.com/facebook/react/issues/6895#issuecomment-281405036, https://github.com/facebook/react/issues/7617
 - [ ] Add error screen

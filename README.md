@@ -7,6 +7,7 @@ In order to explore this repository make a global search for the key words 'NOTI
 ## Redux motivations and principles
 
 Motivaion [https://redux.js.org/introduction/motivation](Read)
+
 Thee principles[https://redux.js.org/introduction/three-principles](Read)
 
 - Non opaque systems
