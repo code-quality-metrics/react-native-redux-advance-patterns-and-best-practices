@@ -14,11 +14,11 @@ In order to know better flux and react we will quickly go through some history a
 
 We know the many benefits or unidirectional data flow vs MVC in the frontend, so that's not covered here.
 
-![Original Flux 0](./original-flux-0.png)
+![Original Flux 0](./ReactNativeRedux/docs/original-flux-0.png)
 
 View triggers actions, actions can be synchronous or asynchronous and can dispatch n ammount of times, simple right?
 
-![Original Flux 1](./original-flux-1.png)
+![Original Flux 1](./ReactNativeRedux/docs/original-flux-1.png)
 
 One of the first problems we encounter when using Flux is that you need to plan how to organize your state in different stores. E.g. UserStore, TodosStore, SettingsStore.
 
@@ -34,14 +34,14 @@ The other big problem with having several stores is about readability, in the Or
 
 More reading about this on Redux: [Actions and Reducers Separation Redux](actions-and-reducers-separation-redux.md)
 
-![Original Flux 2](./original-flux-2.png)
+![Original Flux 2](./ReactNativeRedux/docs/original-flux-2.png)
 
 One big step taken into the right direction was to use a single store, libraries like [Baobab.js](https://github.com/Yomguithereal/baobab) and [Immutable.js](https://github.com/immutable-js/immutable-js) killed the pain of having to think about multiple stores, you have actions that directly manipulate the state converting the actions into an isolated unit of effects, you only need to open one file to know everything there is to know about that action! You can also ready more about that here [Actions and Reducers Separation Redux](actions-and-reducers-separation-redux.md).
 
-![Original Flux 3](./original-flux-3.png)
+![Original Flux 3](./ReactNativeRedux/docs/original-flux-3.png)
 
 TODO...
 
-![Original Flux 4](./original-flux-4.png)
+![Original Flux 4](./ReactNativeRedux/docs/original-flux-4.png)
 
 TODO...
