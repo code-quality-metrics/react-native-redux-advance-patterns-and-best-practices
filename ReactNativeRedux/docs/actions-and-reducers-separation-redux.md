@@ -1,6 +1,4 @@
-# Notes about state management
-
-## Actions and Reducers separation
+# Actions and Reducers separation
 
 The separtion of Action logic and Reducer state changes in Redux have some consequences
 

@@ -1,234 +1,47 @@
-# React Native Redux Best practices
+# React Native Redux Advanced Patterns and Best Practices
 
-Exploring and documenting all the nice and ugly parts of React Native and Redux
+An in-depth exploration of React Native and Redux, the idea is to create a best practices guide and avoid the Flux/Redux pain points as much as possible.
 
-In order to explore this repository make a global search for the key words 'NOTICE', 'QUESTION' and 'MODULARITY' and you will find nice peaces of documentation explaining architectural desicions.
+## TL;DR
 
-## Redux motivations and principles
+Redux doesn't improve much on the original Flux design by facebook, you are better find a library with a single store, decent state management and the router state inside the app state like Mobx, Cerebral.js, Vuex, Baobab.js, etc.
 
-Motivaion [https://redux.js.org/introduction/motivation](Read)
+If you don't have an option because "Redux is Industry Standard"(It's not) then follow our practial "Lipstick in a Redux" Guide :)
 
-Thee principles[https://redux.js.org/introduction/three-principles](Read)
+## Original Flux
 
-- Non opaque systems
-- Deterministic
-- Simple dependencies and structure
+In order to know better flux and react we will quickly go through some history and leasons learned using React + The original Flux dispatcher.
 
-- Command Query Responsibility Segregation
-- Event sourcing
+We know the many benefits or unidirectional data flow vs MVC in the frontend, so that's not covered here.
 
-- Make state muttations predictable
+![Original Flux 0](./original-flux-0.png)
 
-- Single source of truth
-- State is read only
+View triggers actions, actions can be synchronous or asynchronous and can dispatch n ammount of times, simple right?
 
-- Never mutate your data
-- Plain objects
+![Original Flux 1](./original-flux-1.png)
 
-- Strict unidirectional data flow
+One of the first problems we encounter when using Flux is that you need to plan how to organize your state in different stores. E.g. UserStore, TodosStore, SettingsStore.
 
-## Redux parts
+The problem with this is that you will eventually find that one store requires another store to finish processing before being able to process its own state thus creating a dependency between store, this can be solved in two ways:
 
-- Actions: Create pure objects
-- Action creators: Functions that create actions
-- Reducer: Tie the state and actions togheter, next state of the app
-- Reducer composition
-- Thunks: Action Creators Functions
+1) Refactor your state in a way you don't need to use waitFor, but now you are designing your state based on "not having stores dependendencies" which could lead to "inconsistent design as your application grows" [waitFor leads to wrong design](https://github.com/facebook/flux/issues/209), (this looks like the preffered solution by most people, Redux doesn't even seems to have it).
 
-## Redux Principles
+2) Add waitFor to your stores.
 
-### ---
+More reading on this: [Combining stores](https://gist.github.com/gaearon/d77ca812015c0356654f).
 
-Flux was created by Facebook with one goal in mind: Reduce bugs and complexity,
-MVC [http://voidcanvas.com/flux-vs-mvc/](See-the-images)...
+The other big problem with having several stores is about readability, in the Original Flux you can have an action `updateTodoAction` that triggers several actions like `updateTodoStarted`, `updateTodo`, `updateTodoFinished`, if you open it, you won't know what this causes in the state, your dispatches could be potentially used in 25 different stores (or reducers) which makes it really hard to create a mental picture of what happens in that action.
 
-### The response of a question should live in just one file
+More reading about this on Redux: [Actions and Reducers Separation Redux](actions-and-reducers-separation-redux.md)
 
-What happens when an action happens?
-explain ...
-One file response is the holly grail of this
+![Original Flux 2](./original-flux-2.png)
 
-### Modularity
+One big step taken into the right direction was to use a single store, libraries like [Baobab.js](https://github.com/Yomguithereal/baobab) and [Immutable.js](https://github.com/immutable-js/immutable-js) killed the pain of having to think about multiple stores, you have actions that directly manipulate the state converting the actions into an isolated unit of effects, you only need to open one file to know everything there is to know about that action! You can also ready more about that here [Actions and Reducers Separation Redux](actions-and-reducers-separation-redux.md).
 
-Modularity
-Where to glue things
-keeping code compartmentalized
+![Original Flux 3](./original-flux-3.png)
 
-### State should only live in the Store
+TODO...
 
-Do not use ReactNavigator please!
-Looks like ReactNavigator finally realized it sucks https://blog.expo.io/announcing-react-navigation-5-0-bd9e5d45569e
-They also realized it https://github.com/react-navigation/redux-helpers
-Testing, Rehydration, Logging
-explain...
+![Original Flux 4](./original-flux-4.png)
 
-### Reducers are not parts of the state
-
-Reducer dependency
-explain...
-examples...
-
-## Simple rules
-
-- Everything should be on state
-- Every change is describe as an action
-- Do not muate state inside reducers
-
-## Breacking the rules
-
-Router has its own state
-
-Two states can cause race conditions, make it hard to debug, its not fully repla
-
-Views can trigger navigation effectvily changing the state of the app without passing through an action
-
-## Fixing it
-
-faceyspacey/redux-first-router
-
-## Standars - Best Practices
-
-Use simple names for reducers e.g. `user`, we know it comes from a reducer.
-Action constants CHAT::CHANGE_MESSAGE
-Angular type constants [CHAT] CHANGE_MESSAGE ?
-Throw an error when reducer type is not found, why should we fail silently?
-
-https://redux-actions.js.org/
-https://github.com/redux-utilities/flux-standard-action
-https://github.com/paularmstrong/normalizr
-
-https://decembersoft.com/posts/a-simple-naming-convention-for-action-creators-in-redux-js/
-https://tech.affirm.com/redux-patterns-and-anti-patterns-7d80ef3d53bc
-
-## Tools
-
-https://www.charlesproxy.com/
-https://www.telerik.com/fiddler
-
-https://logrocket.com/
-
-https://facebook.github.io/stetho/
-
-https://www.freecodecamp.org/news/inserting-uml-in-markdown-using-vscode/
-http://plantuml.com/activity-diagram-beta
-
-https://www.netlify.com/blog/2018/08/23/how-to-easily-visualize-a-projects-dependency-graph-with-dependency-cruiser/
-https://blog.bitsrc.io/build-a-dependency-graph-profiler-in-js-caf087ce08ea
-https://arkit.pro/svg/UDfDp34EW20C0C2zh-YeWrym37waaQe4sf82-dqTdI-vq3fv7r80MavQoKbGJ6s_t8In--2Vj8kYFKbFFAWq1jZuvcAL7PSL9_AS-WmGMEDtlbU28LS0
-
-## State
-
-State should represent UI and app state in its shape, not accommodate to database or API and then mutate to UI/App state
-
-## Improvements
-
-State doesn't need to be call reducer
-
-## Tricky parts
-
-Do not catch on Thunks [https://redux.js.org/advanced/async-actions](Link)
-
-## Questions?
-
-- What triggers the first dispatch that loads all the data in the app a view? and if it a view can we get it out?
-- Is it a common practice to make a network middleware? what are the pros / cons?
-- Detect not implemented actions
-- See the whole state of the app in React Native Debugger
-- how do you tell `src/support/navigation/navigators/LoggedInNavigator.js` which one is the default?
-- is it a common practice to put the state in state.dataReducer.adReducer? would it be better to just do state.ad, date.user....
-- should view components call service directly => yes
-
-```js
-  ping: () => {
-    dispatch(pingSession())
-  },
-  // action types are spread all over the place, support, services, everyone knows about actions
-```
-
-- Which folders are allowed to create actions?
-- Which folders are allowed to dispatch actions?
-
-- navigates are scattered all over the app? because the view is the glue between router state and redux store, you can't nativigate from an action right?
-
-## How to's indicators of readability
-
-View the rutes of the app based on state
-
-## Nice to have
-
-Function tree
-State mutators: set()
-
-## What to contribute on
-
-https://github.com/LogRocket/redux-logger
-
-## Network Middleware
-
-The network middleware allows us to dispatch simple actions that will call the API endpoints
-
-## Data loading
-
-When does it happens? What triggers it? They are dependent on the navigator
-onMount ->
-
-## TOREAD
-
-https://github.com/18601673727/redux-axios
-https://github.com/xgrommx/awesome-redux
-https://github.com/reduxjs/redux/issues/1171
-
-no witch statements
-no constant duplication const TYPE = 'TYPE'
-
-```js
-// Creates store, Add reducer directly
-// Add Redux Dev Tools Extension
-const store = configureStore({
-  reducer: counter
-})
-```
-
-```js
-// Action creator creator :)
-// Or, use `createAction` to generate the action creator:
-const incrementNew = createAction('INCREMENT')
-console.log(incrementNew())
-// {type: "INCREMENT"}
-```
-
-https://github.com/phanhoangloc/react-native-architecture
-
-https://daveceddia.com/redux-action-creators/
-
-https://github.com/redux-utilities/reduce-reducers
-
-https://medium.com/fullstack-academy/thunks-in-redux-the-basics-85e538a3fe60
-
-https://github.com/shakacode/redux-tree
-
-https://amplitude.github.io/redux-query/docs/getting-started
-
-https://medium.com/edge-coders/the-difference-between-flux-and-redux-71d31b118c1
-https://blog.brainsandbeards.com/advanced-redux-patterns-selectors-cb9f88381d74
-
-http://nicolashery.com/describing-ui-state-with-data/
-
-https://itnext.io/make-services-a-natural-prt-of-redux-architecture-8a78b6a4b961
-
-http://slides.com/joelkanzelmeyer/taming-large-redux-apps#/
-https://dzone.com/articles/real-world-reactjs-and-redux-part-1
-https://dzone.com/articles/real-world-reactjs-and-redux-part-2
-https://www.youtube.com/watch?v=lI3IcjFg9Wk
-
-https://github.com/redux-saga/redux-saga
-https://redux-actions.js.org/
-https://blog.mapbox.com/redux-for-state-management-in-large-web-apps-c7f3fab3ce9b
-https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0
-https://blog.logrocket.com/improve-react-native-performance-with-immutability/
-
-https://github.com/Reactive-Extensions/RxJS
-
-## Articles
-
-https://devhub.io/topic/redux
+TODO...
