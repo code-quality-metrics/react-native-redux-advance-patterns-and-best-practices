@@ -178,6 +178,22 @@ https://github.com/18601673727/redux-axios
 https://github.com/xgrommx/awesome-redux
 https://github.com/reduxjs/redux/issues/1171
 
+https://github.com/reduxjs/reselect
+
+https://github.com/dtinth/redux-waitfor
+
+https://stackoverflow.com/questions/33619775/redux-multiple-stores-why-not
+
+https://egghead.io/lessons/react-redux-the-single-immutable-state-tree
+
+https://blog.brainsandbeards.com/advanced-redux-patterns-normalisation-6b9a5aa46e1f
+
+https://github.com/kentcdodds/advanced-react-patterns-v2
+
+https://github.com/wix/remx
+
+https://www.wix.engineering/post/front-end-platform-builders-sharing-our-insights-with-the-community
+
 no witch statements
 no constant duplication const TYPE = 'TYPE'
 
