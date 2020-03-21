@@ -83,7 +83,7 @@ Lets say you our your company want to create your own Uber for dogs.
 
 Our ultimate goal is to provide you with the tools (mostly free) to develop an enterprise system capable of handling 10,000,000 dog's rides per day with 10% of the work or less it would normally take.
 
-You should be cable to opt out of our managed system and go full open source self hosted any time you see fit.
+You should be able to opt out of our managed system and go full open source self hosted any time you see fit.
 
 This is not a no-code fit for all sollution, this is an open source technology framework focused on quality and productivity for developers, startups and enterprise.
 
