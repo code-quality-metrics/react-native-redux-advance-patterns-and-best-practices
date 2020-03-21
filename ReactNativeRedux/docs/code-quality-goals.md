@@ -86,3 +86,7 @@ Our ultima goal is to provide you with the tools (mostly free) to develop and en
 You should be cable to opt out of our managed system and go full open source self hosted any time you see fit.
 
 This is not a no-code fit for all sollution, this is an open source technology framework focused on quality and productivity for developers, startups and enterprise.
+
+## Possible Names
+
+... @David Help!
