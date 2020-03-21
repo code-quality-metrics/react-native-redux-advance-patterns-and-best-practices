@@ -35,6 +35,8 @@
 - [x] Implement Logout with Thunks
 - [x] Document that thunks are not considered actions by Redux, hence they don't log (they don't have types)
 - [x] Use the event listener of firebase both for login and logout to avoid replicating logic
+- [x] Define goals of Code Quality
+- [ ] Define the app to be constructed
 - [ ] How to fix the three main problems of Redux?
 - [ ] Research selectors https://github.com/reduxjs/reselect
 - [ ] Fix inconsistencies with prettier and eslint
@@ -45,7 +47,9 @@
 - [ ] Move to https://rnfirebase.io/
 - [ ] Add redux forms, we want to log what the user is doing in actions! document it
 - [ ] Add https://logrocket.com/
+- [ ] Read about AppsFlyer
 
 ## Later
 
+- [ ] Research about performance https://reactjs.org/docs/perf.html
 - [ ] native loading screen + also RN loading?
