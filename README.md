@@ -6,7 +6,7 @@ An in-depth exploration of React Native and Redux, the idea is to create a best 
 
 Redux doesn't improve much on the original Flux design by facebook, you are better find a library with a single store, decent state management and the router state inside the app state like Mobx, Cerebral.js, Vuex, Baobab.js, etc.
 
-If you don't have an option because "Redux is Industry Standard"(It's not) then follow our practial "Lipstick in a Redux" Guide :)
+If you don't have an option because "Redux is Industry Standard"(It's not) then follow our practial "Lipstick on a Redux" Guide :)
 
 ## Original Flux
 
