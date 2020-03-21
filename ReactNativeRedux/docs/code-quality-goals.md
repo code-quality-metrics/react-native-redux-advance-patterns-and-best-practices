@@ -89,4 +89,6 @@ This is not a no-code fit for all sollution, this is an open source technology f
 
 ## Possible Names
 
+[codequalityframework.com](https://www.namecheap.com/domains/registration/results/?domain=codequalityframework.com)
+
 ... @David Help!
