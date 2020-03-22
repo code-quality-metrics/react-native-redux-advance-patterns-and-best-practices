@@ -36,11 +36,20 @@
 - [x] Document that thunks are not considered actions by Redux, hence they don't log (they don't have types)
 - [x] Use the event listener of firebase both for login and logout to avoid replicating logic
 - [x] Define goals of Code Quality
-- [ ] Define the app to be constructed
+- [x] Define the app to be constructed
+- [ ] Add Native Base
+- [ ] Integrate Native Base in Signup/Login flow
+- [ ] Create user settings View with Native Base
+- [ ] Create a bunch of screen to create routing complexity
+- [ ] Add deep linking into a page with tabs to create more routing complexity
+- [ ] Create an Initial Data loading that is slow enough
+- [ ] Create a necessity for using an action in different reducers and document complexity
+
 - [ ] How to fix the three main problems of Redux?
+
 - [ ] Research selectors https://github.com/reduxjs/reselect
 - [ ] Fix inconsistencies with prettier and eslint
-- [ ] Add a material library
+
 - [ ] Find out about catching on thunks and react https://github.com/facebook/react/issues/6895, https://github.com/facebook/react/issues/6895#issuecomment-281405036, https://github.com/facebook/react/issues/7617
 - [ ] Add error screen
 - [ ] Document the naming of actions, what happened vs what does it do?
@@ -48,8 +57,26 @@
 - [ ] Add redux forms, we want to log what the user is doing in actions! document it
 - [ ] Add https://logrocket.com/
 - [ ] Read about AppsFlyer
+- [ ] https://redux-observable.js.org/
 
 ## Later
 
 - [ ] Research about performance https://reactjs.org/docs/perf.html
 - [ ] native loading screen + also RN loading?
+
+## Boilerplates
+
+https://blog.nativebase.io/launching-react-native-dating-app-with-backend-539400d1aea6
+
+## Other Frameworks
+
+https://mobx.js.org/README.html
+
+## Routing
+
+https://wix.github.io/react-native-navigation/#/docs/Usage
+https://medium.com/@sibelius/how-we-save-1m-hours-of-development-using-react-navigation-3681f2f907c9
+https://blog.expo.io/re-writing-react-navigation-stack-db6a376522b1
+https://medium.com/async-la/a-stately-guide-to-react-navigation-with-redux-1f90c872f96e
+https://medium.com/@jan.hesters/building-a-react-native-app-with-complex-navigation-using-react-navigation-85a479308f52
+https://blog.mapbox.com/redux-for-state-management-in-large-web-apps-c7f3fab3ce9b

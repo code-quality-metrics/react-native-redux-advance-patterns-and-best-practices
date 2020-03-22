@@ -24,6 +24,12 @@ Similar (but better) to:
 [appandflow.com](https://appandflow.com/pricing)\
 [callstack.com](https://callstack.com/)
 
+#### Gister
+
+[Gister](https://gigster.com/talent/) This company deserves to be reviewed in depth
+
+[the-skill-thats-paving-the-way-for-freelancers-to-make-500k-or-more](https://www.forbes.com/sites/reneemorad/2016/10/24/the-skill-thats-paving-the-way-for-freelancers-to-make-500k-or-more/#2ce1b4da13ae)
+
 ### Fullstack framework
 
 From all the leasons learned by traversing the previous steps we are ready to build our own framework, a Full Stack Open Source rapid prototyping Entreprise level zero dev-ops organic non GMO Framework.
@@ -52,14 +58,14 @@ Once we start having companies using our system we can create paid services to s
 
 ### Features for the App
 
-### Basic
+#### Basic
 
 - Routing system
 - Authentication with sessions and permissions
 - Complete most common Signup flow
 - User settings
 
-### All the others
+#### All the others
 
 - Complex routing system
 - Authentication with sessions and a permission system (JWT are limiting)
@@ -77,6 +83,21 @@ Once we start having companies using our system we can create paid services to s
 - Galery
 - Voting, Liking
 
+### Ideas for the App
+
+An introspective App that tells you information about the system: The amount of renders in react, times it takes from startup to last render, etc.
+
+A learning platform, implement stuff that require us to learn new things like:
+
+Math and Algorithms
+Learning Paths
+Psychology and Culture for a post neoliberaist era
+Financial Communities
+A course on Regex
+Theory on computation
+Machine learning
+Anti patterns
+
 ## Ultimate Goal
 
 Lets say you our your company want to create your own Uber for dogs.
@@ -86,6 +107,14 @@ Our ultimate goal is to provide you with the tools (mostly free) to develop an e
 You should be able to opt out of our managed system and go full open source self hosted any time you see fit.
 
 This is not a no-code fit for all sollution, this is an open source technology framework focused on quality and productivity for developers, startups and enterprise.
+
+## Second Ultimate Goal
+
+Become great Engineers and share the knowledge.
+
+Learn and create a path for other people to follow.
+
+Standarize what it means to mean a Jr, Mid, Senior developer. An Engineer, etc.
 
 ## Possible Names
 
