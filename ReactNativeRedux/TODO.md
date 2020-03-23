@@ -37,15 +37,36 @@
 - [x] Use the event listener of firebase both for login and logout to avoid replicating logic
 - [x] Define goals of Code Quality
 - [x] Define the app to be constructed
+- [x] Use BuilderX and find out how good is it and its limits
+- [x] => Good to spit code but you have to refactor the code on each copy/paste, better to design first and code after design if final to avoid extra work
+
+- [ ] Design the App on BuilderX
+
 - [ ] Add Native Base
+- [x] How to show Errors on the login/signup screen? => lets just show them on a pop up
+- [ ] Create a popup system
+- [ ] Create login screen with Native Base
 - [ ] Integrate Native Base in Signup/Login flow
 - [ ] Create user settings View with Native Base
+
+- [ ] Talk with David the wide range of signup/login protocols there are
+
+
+- [ ] Add Router Complexity
 - [ ] Create a bunch of screen to create routing complexity
 - [ ] Add deep linking into a page with tabs to create more routing complexity
-- [ ] Create an Initial Data loading that is slow enough
-- [ ] Create a necessity for using an action in different reducers and document complexity
+- [ ] Create a needs to render a component just to glue router and app state and then redirect or something
 
-- [ ] How to fix the three main problems of Redux?
+- [ ] Reducer complexity
+
+- [ ] Network Middleware Complexity
+- [ ] Create a Network Middleware
+- [ ] Create same Network libray
+- [ ] Trigger action from withing the network middleware using interceptors
+
+- [ ] Create an unecessary View controller component
+
+- [ ] Create a map of the app
 
 - [ ] Research selectors https://github.com/reduxjs/reselect
 - [ ] Fix inconsistencies with prettier and eslint
@@ -55,6 +76,11 @@
 - [ ] Document the naming of actions, what happened vs what does it do?
 - [ ] Move to https://rnfirebase.io/
 - [ ] Add redux forms, we want to log what the user is doing in actions! document it
+
+- [ ] Create the ideal App using Redux
+
+- [ ] Create a better app using just vainilla JS
+
 - [ ] Add https://logrocket.com/
 - [ ] Read about AppsFlyer
 - [ ] https://redux-observable.js.org/

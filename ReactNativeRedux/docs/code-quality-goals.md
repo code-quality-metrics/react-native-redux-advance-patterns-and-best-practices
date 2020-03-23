@@ -120,4 +120,6 @@ Standarize what it means to mean a Jr, Mid, Senior developer. An Engineer, etc.
 
 [codequalityframework.com](https://www.namecheap.com/domains/registration/results/?domain=codequalityframework.com)
 
+ARKITEKTOR(архитектор) FRAMEWORK [arkitektorframework.com](https://www.namecheap.com/domains/registration/results/?domain=arkhitektor)
+
 ... @David Help!

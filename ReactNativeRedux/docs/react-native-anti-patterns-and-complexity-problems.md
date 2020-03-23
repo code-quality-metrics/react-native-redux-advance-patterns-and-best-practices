@@ -12,6 +12,10 @@ Complexity of logic flow spread all around.
 
 Race conditions with deep linking redirection between router and thunks, and the need to prepare views to render without data due to this.
 
+### Navigation inside components, utils, etc
+
+Looks like we a good example of why this is a bad idea.
+
 ## Separation of actions and reducers complexity
 
 [Actions and reducers separation redux](./actions-and-reducers-separation-redux.md)
