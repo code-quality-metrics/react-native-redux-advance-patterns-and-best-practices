@@ -15,6 +15,8 @@ class Main extends React.Component {
       <View style={styles.container}>
         <View>
           <Button title="Log out" onPress={logOut} />
+          <Button title="Log out" onPress={logOut} />
+          <Button title="Log out" onPress={logOu} />
         </View>
       </View>
     )
